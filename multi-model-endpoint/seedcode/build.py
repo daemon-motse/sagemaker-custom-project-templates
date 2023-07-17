@@ -147,6 +147,7 @@ if __name__ == "__main__":
     logging.basicConfig(format=log_format, level=args.log_level)
 
     # Get the latest approved package
+    logger.inf(f"model_package_group_name: {args.model_package_group_name}")
     model_package_arn = get_approved_package(args.model_package_group_name)
 
     # Write the staging config
